@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <base-config cleartextTrafficPermitted="true">
+        <trust-anchors>
+            <certificates src="system" />
+        </trust-anchors>
+    </base-config>
+</network-security-config>
+
+
+<!--
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <base-config cleartextTrafficPermitted="false">
+        &lt;!&ndash;<domain includeSubdomains="true">http://talentplus.drline.in/talentplus-webapp/user-api/</domain>
+    &ndash;&gt;
+
+    </base-config>
+</network-security-config>-->

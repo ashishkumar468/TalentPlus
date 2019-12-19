@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true">
+
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_gravity="center"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:background="@color/white"
+                android:padding="24dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="24dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_launcher" />
+
+                <!-- Email Label -->
+                <EditText
+                    android:id="@+id/input_phone_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edittext_background"
+                    android:hint="Phone number"
+                    android:inputType="phone"
+                    android:padding="12dp" />
+
+                <EditText
+                    android:id="@+id/input_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/edittext_background"
+                    android:hint="Password"
+                    android:inputType="textPassword"
+                    android:padding="12dp" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_login"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:background="@color/green"
+                    android:alpha="0.8"
+                    android:text="Log in" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="4dp"
+                        android:gravity="start"
+                        android:text="Forgotten Login details?"
+                        android:textSize="12dip" />
+
+                    <TextView
+                        android:id="@+id/forgot_password"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="4dp"
+                        android:text="Get help with signing in."
+                        android:textColor="@color/black"
+                        android:textSize="12dip"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:layout_marginTop="24dp"
+                    android:text="OR"
+                    android:textColor="@color/black" />
+<!--
+                <ImageView
+                    android:id="@+id/login_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="32dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginBottom="24dp"
+                    android:src="@drawable/facebook_login" />-->
+
+
+                <com.facebook.login.widget.LoginButton
+                    android:id="@+id/login_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="30dp"
+                    android:visibility="gone"
+                    android:layout_marginBottom="30dp" />
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="OR"
+                    android:visibility="gone"
+                    android:textColor="@color/black" />
+
+
+                <TextView
+                    android:id="@+id/link_signup"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginBottom="24dp"
+                    android:gravity="center"
+                    android:text="No account yet? Create one"
+                    android:textSize="16dip" />
+
+
+            </LinearLayout>
+
+
+</ScrollView>

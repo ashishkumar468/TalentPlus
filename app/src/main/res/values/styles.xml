@@ -1,0 +1,142 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="AppTheme.NoActionBar.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.NoActionBar.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+
+    <style name="DarkActionBarWithLightAccent" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
+        <item name="colorAccent">@color/white</item>
+    </style>
+
+
+    <style name="TextAppearance.Title" parent="@android:style/TextAppearance">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/primary_dark_text</item>
+    </style>
+
+    <style name="TextAppearance.Large" parent="@android:style/TextAppearance">
+        <item name="android:textSize">24sp</item>
+        <item name="android:textColor">@color/primary_dark_text</item>
+    </style>
+
+    <style name="TextAppearance.Title.White" parent="@android:style/TextAppearance">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="TextAppearance.Title.Light" parent="@android:style/TextAppearance">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/secondary_light</item>
+    </style>
+
+    <style name="TextAppearance.Toolbar.Expanded" parent="TextAppearance.Design.CollapsingToolbar.Expanded">
+        <item name="android:textSize">24sp</item>
+    </style>
+
+    <style name="TextAppearance.Second" parent="@android:style/TextAppearance">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/secondary_text</item>
+    </style>
+
+    <style name="TextAppearance.Second.Light" parent="@android:style/TextAppearance">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/secondary_light</item>
+    </style>
+
+    <style name="TextAppearance.Highlight" parent="@android:style/TextAppearance">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/highlight_text</item>
+    </style>
+
+    <style name="TextAppearance.Second.Dark" parent="@android:style/TextAppearance">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/primary_dark_text</item>
+    </style>
+
+    <style name="TextAppearance.MainTitle" parent="@android:style/TextAppearance">
+        <item name="android:textSize">32sp</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="TextAppearance.Counter" parent="@android:style/TextAppearance">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/primary_dark_text</item>
+    </style>
+
+    <style name="FollowButton" parent="Base.Widget.AppCompat.Button">
+        <item name="android:layout_width">@dimen/follow_button_width</item>
+        <item name="android:layout_height">@dimen/follow_button_height</item>
+        <item name="android:padding">0dp</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <!--Tab layout-->
+    <style name="TabLayout" parent="Widget.Design.TabLayout">
+        <item name="tabIndicatorColor">@color/white</item>
+        <item name="tabIndicatorHeight">@dimen/tab_indicator_height</item>
+        <item name="tabGravity">fill</item>
+        <item name="tabMode">fixed</item>
+    </style>
+
+    <style name="Theme_Dialog" parent="Theme.AppCompat.Light.Dialog">
+        <item name="android:windowMinWidthMajor">90%</item>
+        <item name="android:windowMinWidthMinor">90%</item>
+    </style>
+
+    <style name="BaseText">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">15dp</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:shadowDx">-1</item>
+        <item name="android:shadowDy">-1</item>
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:shadowColor">#000000</item>
+        <item name="android:shadowRadius">2</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="card_style">
+        <item name="cardCornerRadius">0dp</item>
+    </style>
+
+    <style name="card_view_with_text" parent="@style/card_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">15dp</item>
+        <item name="android:layout_alignParentBottom">true</item>
+        <item name="cardBackgroundColor">@color/percent_50_black</item>
+    </style>
+
+    <style name="MenuButtonsStyle">
+        <item name="fab_size">mini</item>
+        <item name="fab_shadowColor">#444</item>
+        <item name="fab_colorNormal">#FFB805</item>
+        <item name="fab_colorPressed">#F2AB00</item>
+        <item name="fab_colorRipple">#D99200</item>
+    </style>
+
+</resources>

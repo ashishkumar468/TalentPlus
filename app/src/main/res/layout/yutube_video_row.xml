@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_view"
+    style="@style/card_style"
+    android:layout_width="match_parent"
+    android:layout_height="0dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/video_thumbnail_placeholder_color"
+        android:orientation="vertical">
+        <FrameLayout
+            android:id="@+id/frame_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <!--<com.google.android.youtube.player.YouTubePlayerView
+            android:id="@+id/youtube_player"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />-->
+
+
+        <com.google.android.youtube.player.YouTubeThumbnailView
+            android:id="@+id/youtube_thumbnail"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:scaleType="centerCrop"
+            android:visibility="visible" />
+
+        </FrameLayout>
+
+
+        <!--<FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <fragment
+            android:id="@+id/youtube_player_fragment"
+            android:name="com.google.android.youtube.player.YouTubePlayerSupportFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/recycler_view"
+            android:layout_below="@+id/toolbar" />
+
+        </FrameLayout>-->
+
+        <ImageView
+            android:id="@+id/youtube_cover"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/youtube_title"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/youtube_title"
+            style="@style/BaseText"
+            android:layout_alignParentBottom="true"
+            android:visibility="gone" />
+
+
+        <TextView
+            style="@style/BaseText"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="?attr/actionBarSize"
+            android:text="Talent Name :"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:visibility="visible" />
+
+        <include layout="@layout/floating_button_menu" />
+    </RelativeLayout>
+
+
+</androidx.cardview.widget.CardView>

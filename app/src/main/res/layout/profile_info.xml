@@ -1,0 +1,153 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/profileInfo"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="@dimen/intrinsic_padding"
+    android:paddingRight="@dimen/intrinsic_padding"
+    android:paddingTop="@dimen/intrinsic_padding">
+
+    <TextView
+        android:id="@+id/followingsCounterTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:padding="@dimen/small_intrinsic_padding"
+        android:textAppearance="@style/TextAppearance.Counter"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/likesCountersTextView"
+        app:layout_constraintStart_toStartOf="@+id/likesCountersTextView"
+        app:layout_constraintTop_toBottomOf="@+id/likesCountersTextView"
+        app:layout_constraintVertical_bias="0.0"
+        android:text="25 \nfollowings"/>
+
+    <TextView
+        android:id="@+id/likesCountersTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="8dp"
+        android:gravity="center"
+        android:padding="@dimen/small_intrinsic_padding"
+        android:textAppearance="@style/TextAppearance.Counter"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/postsCounterTextView"
+        app:layout_constraintTop_toTopOf="@+id/postsCounterTextView"
+        android:text="25 \n likes"/>
+
+    <TextView
+        android:id="@+id/followersCounterTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:padding="@dimen/small_intrinsic_padding"
+        android:textAppearance="@style/TextAppearance.Counter"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/postsCounterTextView"
+        app:layout_constraintStart_toStartOf="@+id/postsCounterTextView"
+        app:layout_constraintTop_toBottomOf="@+id/postsCounterTextView"
+        app:layout_constraintVertical_bias="0.0"
+        android:text="25 \n followers"/>
+
+    <TextView
+        android:id="@+id/postsCounterTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:padding="@dimen/small_intrinsic_padding"
+        android:textAppearance="@style/TextAppearance.Counter"
+        android:visibility="visible"
+        app:layout_constraintEnd_toStartOf="@+id/likesCountersTextView"
+        app:layout_constraintStart_toEndOf="@+id/imageContainer"
+        app:layout_constraintTop_toBottomOf="@+id/nameTextView"
+        android:text="25 \n posts" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/edit_profile_btn"
+        style="@style/FollowButton"
+        android:background="@color/green"
+        android:alpha="0.8"
+        android:layout_marginBottom="16dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageContainer"
+        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintVertical_chainStyle="spread_inside"
+        android:textColor="@color/dart_transparent"
+        android:text="Edit" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/logout_btn"
+        style="@style/FollowButton"
+        android:background="@color/green"
+        android:alpha="0.8"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edit_profile_btn"
+        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintVertical_chainStyle="spread_inside"
+        android:textColor="@color/dart_transparent"
+        android:text="Logout" />
+
+    <TextView
+        android:id="@+id/nameTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:gravity="center_horizontal"
+        android:padding="0dp"
+        android:paddingTop="@dimen/intrinsic_padding"
+        android:textAppearance="@style/TextAppearance.Large"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageContainer"
+        app:layout_constraintTop_toTopOf="@+id/imageContainer"
+        android:text="Talent Name" />
+
+    <RelativeLayout
+        android:id="@+id/imageContainer"
+        android:layout_width="@dimen/profile_screen_avatar_size"
+        android:layout_height="@dimen/profile_screen_avatar_size"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="@dimen/progress_bar_size"
+            android:layout_height="@dimen/progress_bar_size"
+            android:layout_centerInParent="true"
+            android:visibility="gone" />
+
+        <com.example.talentplusapplication.views.CircularImageView
+            android:id="@+id/imageView_circular"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="0dp"
+            android:src="@drawable/ic_stub"
+            android:transitionName="@string/post_author_image_transition_name"
+            app:border="false"
+            app:shadow="false" />
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

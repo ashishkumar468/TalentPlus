@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:expandableTextView="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="@dimen/large_intrinsic_padding"
+    android:paddingBottom="@dimen/large_intrinsic_padding"
+    app:border="true">
+
+    <com.example.talentplusapplication.views.CircularImageView
+        android:id="@+id/imageView_circular"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/ic_stub"
+        app:border="true"
+        app:border_width="0dp"
+        app:shadow="false" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="8dp"
+        android:layout_toEndOf="@+id/imageView_circular"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:id="@+id/txt_comment_userName"
+            android:textColor="@color/primary_dark_text"
+            android:text="talentPlusUser" />
+
+        <TextView
+            android:id="@+id/txt_comments"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:textStyle="normal"
+            android:textColor="@color/secondary_text"
+            android:text="User comments" />
+    </LinearLayout>
+
+
+    <!--<com.example.talentplusapplication.views.ExpandableTextView
+        android:id="@+id/commentText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/avatarImageView"
+        android:paddingStart="@dimen/large_intrinsic_padding"
+        android:visibility="visible"
+        expandableTextView:animAlphaStart="1"
+        expandableTextView:animDuration="200"
+        expandableTextView:collapseText="@string/collapse_text_label"
+        expandableTextView:expandText="@string/expand_text_label"
+        expandableTextView:maxCollapsedLines="3">
+
+        <TextView
+            android:id="@+id/expandable_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autoLink="web"
+            android:ellipsize="end"
+            android:textAppearance="@style/TextAppearance.Second" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:paddingTop="@dimen/small_intrinsic_padding">
+
+            <TextView
+                android:id="@+id/dateTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:text="day ago"
+                android:textAppearance="@style/TextAppearance.Second.Light" />
+
+            <TextView
+                android:id="@+id/expand_collapse"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:autoLink="web"
+                android:textAppearance="@style/TextAppearance.Second.Light" />
+
+        </RelativeLayout>
+
+    </com.example.talentplusapplication.views.ExpandableTextView>-->
+
+</RelativeLayout>

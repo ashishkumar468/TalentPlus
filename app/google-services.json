@@ -1,0 +1,80 @@
+{
+  "project_info": {
+    "project_number": "886029611850",
+    "firebase_url": "https://talent-plus.firebaseio.com",
+    "project_id": "talent-plus",
+    "storage_bucket": "talent-plus.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:886029611850:android:66d35357e9e33917e847b3",
+        "android_client_info": {
+          "package_name": "com.example.talentplusapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "886029611850-f0uhtngh13q7g8ocj4pvp6bnp46ok0sc.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.talentplusapplication",
+            "certificate_hash": "8bf7804e886dfddfebb9b0b19668afd92f451cb5"
+          }
+        },
+        {
+          "client_id": "886029611850-8sirukc4qpkj1j44rioc2jnt8top4eu1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.talentplusapplication",
+            "certificate_hash": "cab99ed49264867f22861b29361c5988011e0bb8"
+          }
+        },
+        {
+          "client_id": "886029611850-3unqvkkk4u5i33rkfoqr7d9s9qtg6dks.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.talentplusapplication",
+            "certificate_hash": "c2c31a04913ea130808f78fc226f4b74cfc4c83e"
+          }
+        },
+        {
+          "client_id": "886029611850-v4drk2rbdr7ok9tcc2709q14jghloabk.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.talentplusapplication",
+            "certificate_hash": "0d546a2bd4c55523d71fe05bc90d5157562e7f0b"
+          }
+        },
+        {
+          "client_id": "886029611850-9rm81ppqh55e7re6663dnaspghfvng1g.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.talentplusapplication",
+            "certificate_hash": "4499007515b41fda74f4acbfd84c46529a2768a4"
+          }
+        },
+        {
+          "client_id": "886029611850-vkle1vkrlolpbukgs7oq18qc4hepekk9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBmORaAPL5VhXk7cSiYxyCHydWPWKnu3m8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "886029611850-vkle1vkrlolpbukgs7oq18qc4hepekk9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

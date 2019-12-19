@@ -1,0 +1,75 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:padding="@dimen/intrinsic_padding">
+
+    <ScrollView
+        android:id="@+id/regForm"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/email_login_form"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/imageContainer"
+                android:layout_width="@dimen/profile_photo_side"
+                android:layout_height="@dimen/profile_photo_side"
+                android:layout_gravity="center_horizontal">
+
+                <ProgressBar
+                    android:id="@+id/avatarProgressBar"
+                    android:layout_width="@dimen/progress_bar_size"
+                    android:layout_height="@dimen/progress_bar_size"
+                    android:layout_centerInParent="true"
+                    android:visibility="gone" />
+
+                <com.example.talentplusapplication.views.CircularImageView
+                    android:id="@+id/imageView_circular"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="0dp"
+                    android:transitionName="@string/post_author_image_transition_name"
+                    app:border="false"
+                    app:shadow="false"
+                    android:src="@drawable/ic_stub" />
+
+            </RelativeLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/nameEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/prompt_name"
+                    android:imeOptions="actionDone"
+                    android:inputType="text"
+                    android:maxLines="1"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_save"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/green"
+                android:text="Save"
+                android:layout_marginTop="24dp"
+                android:textColor="@color/colorPrimary"
+                android:layout_gravity="center_horizontal"/>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

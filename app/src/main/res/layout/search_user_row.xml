@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:weightSum="3"
+    android:orientation="horizontal">
+
+    <RelativeLayout
+        android:id="@+id/imageContainer"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_weight="0.2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <com.example.talentplusapplication.views.CircularImageView
+            android:id="@+id/imageView_circular"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="0dp"
+            android:src="@drawable/ic_stub"
+            android:transitionName="@string/post_author_image_transition_name"
+            app:border="false"
+            app:shadow="false" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:layout_weight="2.1"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txt_userName"
+            android:textSize="12sp"
+            android:textColor="@color/primary_dark_text"
+            android:textStyle="bold"
+            android:text="User Name"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txt_userFname"
+            android:textSize="12sp"
+            android:textColor="@color/secondary_light"
+            android:text="User Name"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="2.1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/txt_userFollowers"
+                android:textSize="12sp"
+                android:textColor="@color/secondary_light"
+                android:textStyle="normal"
+                android:text="0 followers,"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/txt_userVideo"
+                android:textSize="12sp"
+                android:textStyle="normal"
+                android:textColor="@color/secondary_light"
+                android:text="0 Videos"/>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

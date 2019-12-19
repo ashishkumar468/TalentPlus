@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/scroll_view"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:fitsSystemWindows="true">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:background="@color/white"
+            android:paddingLeft="24dp"
+            android:paddingRight="24dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="112dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="24dp"
+                android:src="@drawable/logo" />
+
+            <EditText
+                android:id="@+id/edt_f_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/edittext_background"
+                android:hint="First Name"
+                android:inputType="text"
+                android:padding="12dp" />
+
+            <EditText
+                android:id="@+id/edt_l_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/edittext_background"
+                android:hint="Last name"
+                android:inputType="text"
+                android:padding="12dp" />
+
+            <EditText
+                android:id="@+id/edt_phone_number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/edittext_background"
+                android:hint="Phone Number"
+                android:inputType="phone"
+                android:padding="12dp" />
+
+            <EditText
+                android:id="@+id/edt_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/edittext_background"
+                android:hint="Password"
+                android:visibility="gone"
+                android:inputType="textPassword"
+                android:padding="12dp" />
+
+            <!-- Signup Button -->
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_next"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:background="@color/green"
+                android:alpha="0.8"
+                android:layout_marginBottom="24dp"
+                android:text="@string/next" />
+
+            <TextView
+                android:id="@+id/link_login"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                android:gravity="center"
+                android:text="Already a member? Login"
+                android:textSize="16dip" />
+
+
+
+
+
+        </LinearLayout>
+
+
+
+
+</LinearLayout>
