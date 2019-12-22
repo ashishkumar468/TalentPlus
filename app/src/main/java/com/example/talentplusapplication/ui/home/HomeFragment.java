@@ -202,7 +202,7 @@ public class HomeFragment extends Fragment implements VideoRecyclerViewAdapter.O
             public void run() {
                 mRecyclerView.playVideo(false);
             }
-        },10000);
+        },4000);
         mRecyclerView.playVideo(false);
 
     }

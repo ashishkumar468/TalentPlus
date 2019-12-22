@@ -179,7 +179,7 @@ public class UserVideoPlayActivity extends AppCompatActivity implements VideoRec
             public void run() {
                 mRecyclerView.playVideo(false);
             }
-        },5000);
+        },4000);
 
     }
 

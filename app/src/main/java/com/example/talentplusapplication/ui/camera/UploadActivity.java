@@ -315,7 +315,7 @@ public class UploadActivity extends AppCompatActivity {
 //                String message = result.getName() + " size " + result.getSize() + " modified " +
 //                        DateFormat.getDateTimeInstance().format(result.getClientModified());
 
-                String message = "Your video has been upload";
+                String message = "Your video has been uploaded";
 
                 onShowToast(message);
 
