@@ -16,7 +16,7 @@ android {
 //    compileSdkVersion 28
     compileSdkVersion COMPILE_SDK_VERSION as int
     defaultConfig {
-        applicationId "com.talentplusapp.android"
+        applicationId "com.example.talentplusapplication"
 
         minSdkVersion COMPILE_MIN_SDK_VERSION as int
         targetSdkVersion COMPILE_SDK_VERSION as int
