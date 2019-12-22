@@ -57,6 +57,7 @@ public class VideoPlayerRecyclerView extends RecyclerView {
     private FrameLayout frameLayout;
     private PlayerView videoSurfaceView;
     private SimpleExoPlayer videoPlayer;
+    private ImageView thumbNail;
 
     // vars
     private List<MyVideoItem> mediaObjects = new ArrayList<>();
@@ -175,6 +176,9 @@ public class VideoPlayerRecyclerView extends RecyclerView {
 
                         break;
                     case Player.STATE_READY:
+                        if(thumbNail!=null){
+                            thumbNail.setVisibility(View.GONE);
+                        }
                         if (progressBar != null) {
                             progressBar.setVisibility(GONE);
                         }
@@ -281,7 +285,7 @@ public class VideoPlayerRecyclerView extends RecyclerView {
         progressBar = holder.mProgressBar;
         viewHolderParent = holder.itemView;
         frameLayout = holder.itemView.findViewById(R.id.media_container);
-
+        thumbNail=holder.mCover;
         videoSurfaceView.setPlayer(videoPlayer);
 
         DataSource.Factory dataSourceFactory = new DefaultDataSourceFactory(
@@ -363,7 +367,7 @@ public class VideoPlayerRecyclerView extends RecyclerView {
         viewHolderParent = null;
     }
 
-    public void setMediaObjects(List<MyVideoItem> mediaObjects){
+    public void setMediaObjects(List<MyVideoItem> mediaObjects) {
         this.mediaObjects.addAll(mediaObjects);
     }
 }

@@ -388,4 +388,9 @@ public class UserVideoPlayActivity extends AppCompatActivity implements VideoRec
     public void onLoadFabProfileClick(int position) {
 
     }
+
+    @Override
+    public void onItemClickListener(int position) {
+        //TODO
+    }
 }

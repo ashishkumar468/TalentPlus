@@ -117,4 +117,9 @@ public class VideoListActivity extends BaseActivity  implements VideoRecyclerVie
     public void onLoadFabProfileClick(int position) {
 
     }
+
+    @Override
+    public void onItemClickListener(int position) {
+        //TODO
+    }
 }

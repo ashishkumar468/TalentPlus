@@ -9,6 +9,7 @@ import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.Handler;
 import android.provider.MediaStore;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -196,6 +197,14 @@ public class HomeFragment extends Fragment implements VideoRecyclerViewAdapter.O
         mRecyclerView.setLayoutManager(mLayoutManager);
         videoRecyclerViewAdapter = new VideoRecyclerViewAdapter(mVideoPlayerManager, getActivity(), listPost, this);
         mRecyclerView.setAdapter(videoRecyclerViewAdapter);
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                mRecyclerView.playVideo(false);
+            }
+        },10000);
+        mRecyclerView.playVideo(false);
+
     }
 
 
@@ -238,7 +247,7 @@ public class HomeFragment extends Fragment implements VideoRecyclerViewAdapter.O
     @Override
     public void onStop() {
         super.onStop();
-        mVideoPlayerManager.stopAnyPlayback();
+        mRecyclerView.releasePlayer();
     }
 
 
@@ -423,9 +432,14 @@ public class HomeFragment extends Fragment implements VideoRecyclerViewAdapter.O
 
     @Override
     public void onLoadFabProfileClick(int position) {
-
         Intent mIntent = new Intent(this.getContext(), UserProfileActivity.class);
         mIntent.putExtra("OtherUserId", listPost.get(position).getUserId());
         startActivity(mIntent);
     }
+
+    @Override
+    public void onItemClickListener(int position) {
+       //TODO
+    }
+
 }

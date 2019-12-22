@@ -46,6 +46,7 @@ public class VideoRecyclerViewAdapter extends RecyclerView.Adapter<VideoViewHold
         viewHolder.mFab_Share.setOnClickListener(v -> mOnLoadFabListener.onLoadFabShareClick(position, viewHolder.mFab_Share, viewHolder.txt_shareCount));
         viewHolder.mFab_Like.setOnClickListener(v -> mOnLoadFabListener.onLoadFabLikeClick(position, viewHolder.mFab_Like, viewHolder.txt_likeCount));
         viewHolder.mFab_profile.setOnClickListener(v -> mOnLoadFabListener.onLoadFabProfileClick(position));
+        viewHolder.mPlayer.setOnClickListener(v->mOnLoadFabListener.onItemClickListener(position));
     }
 
     public interface OnLoadFabClickListener {
@@ -56,6 +57,9 @@ public class VideoRecyclerViewAdapter extends RecyclerView.Adapter<VideoViewHold
         void onLoadFabShareClick(int position, ImageButton mFab_Share, TextView txt_shareCount);
 
         void onLoadFabProfileClick(int position);
+
+        void onItemClickListener(int position);
+
     }
 
     @Override

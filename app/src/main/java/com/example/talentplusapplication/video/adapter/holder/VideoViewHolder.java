@@ -92,7 +92,7 @@ public class VideoViewHolder extends RecyclerView.ViewHolder {
         if (item.getProfilePictureUrl() != null) {
             Glide.with(MyApplication.getAppContext()).load(item.getProfilePictureUrl()).into(mFab_profile);
         }
-//        mCover.setVisibility(View.VISIBLE);
+        mCover.setVisibility(View.VISIBLE);
         Glide.with(MyApplication.getAppContext()).load(item.getVideoUrl()).into(mCover);
     }
 }
