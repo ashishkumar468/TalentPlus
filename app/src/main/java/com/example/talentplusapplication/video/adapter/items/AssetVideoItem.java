@@ -4,6 +4,7 @@ import android.content.res.AssetFileDescriptor;
 import android.graphics.Bitmap;
 import android.media.ThumbnailUtils;
 import android.provider.MediaStore;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 
@@ -44,7 +45,6 @@ public class AssetVideoItem extends BaseVideoItem {
     public AssetVideoItem(String title, AssetFileDescriptor assetFileDescriptor, VideoPlayerManager<MetaData> videoPlayerManager, Picasso imageLoader, int imageResource) {
         super(videoPlayerManager);
         mTitle = title;
-//        mAssetFileDescriptor = assetFileDescriptor;
         mImageLoader = imageLoader;
         mImageResource = imageResource;
     }
@@ -54,8 +54,6 @@ public class AssetVideoItem extends BaseVideoItem {
         mTitle = title;
         mImageLoader = imageLoader;
         mImageResource = imageResource;
-
-//        mAssetFileDescriptor = null;
     }
 
     public AssetVideoItem(PostDtoListProxy postDtoList, VideoPlayerManager<MetaData> videoPlayerManager, Picasso imageLoader, int imageResource) {
@@ -105,16 +103,8 @@ public class AssetVideoItem extends BaseVideoItem {
             Glide.with(MyApplication.getAppContext()).load(mPostList.getProfilePictureUrl()).into(viewHolder.mFab_profile);
         }
         viewHolder.mCover.setVisibility(View.VISIBLE);
-//        mImageLoader.load(mPostList.getVideoUrl()).into(viewHolder.mCover);
         Glide.with(MyApplication.getAppContext()).load(mPostList.getVideoUrl()).into(viewHolder.mCover);
     }
-
-   /* @Override
-    public void updateCover(int position, VideoViewHolder viewHolder) {
-//        mImageLoader.load(mTitle).into(viewHolder.mCover);
-//        Glide.with(MyApplication.getAppContext()).load(mPostList.getVideoUrl()).centerCrop().into(viewHolder.mCover);
-
-    }*/
 
     public String currentItem() {
         return mPostList.getVideoUrl();
@@ -122,94 +112,10 @@ public class AssetVideoItem extends BaseVideoItem {
 
     @Override
     public void playNewVideo(MetaData currentItemMetaData, VideoPlayerView player, VideoPlayerManager<MetaData> videoPlayerManager) {
-//        videoPlayerManager.playNewVideo(currentItemMetaData, player, mAssetFileDescriptor);
-
-        assert mPostList.getVideoUrl() != null;
-        String returnFileName=returnVideoName(mPostList.getVideoUrl());
-
-        try {
-
-            File file = new File(BaseCameraActivity.getAndroidMoviesFolderInternalStorage(), returnFileName);
-            if (file.exists()) {
-
-//               boolean isCorrupt= new VideosDownloader(MyApplication.getAppContext()).onCheckDownloadFileIsCorruptOrNot(mPostList.getVideoUrl());
-//               if (!isCorrupt){
-                Log.e(TAG,"file is exist "+getSDCardUrlPath(returnFileName));
-                   videoPlayerManager.playNewVideo(null, player,
-                           getSDCardUrlPath(returnFileName));
-//               }else {
-//                   videoPlayerManager.playNewVideo(null, player,
-//                           mPostList.getVideoUrl());
-//               }
-
-
-            }else {
-                Log.e(TAG,"file is not  exist "+ mPostList.getVideoUrl());
-                videoPlayerManager.playNewVideo(null, player,
-                        mPostList.getVideoUrl());
-            }
-
-            player.addMediaPlayerListener(new MediaPlayerWrapper.MainThreadMediaPlayerListener() {
-                @Override
-                public void onVideoSizeChangedMainThread(int width, int height) {
-                }
-
-                @Override
-                public void onVideoPreparedMainThread() {
-                    // When video is prepared it's about to start playback. So we hide the cover
-                }
-
-                @Override
-                public void onVideoCompletionMainThread() {
-                }
-
-                @Override
-                public void onErrorMainThread(int what, int extra) {
-//                    Log.e(TAG,"Player what "+ what);
-//                    Log.e(TAG,"Player state vvvv  "+ player.getCurrentState());
-
-//                    File f = new File(getSDCardUrlPath(returnFileName));
-//                    if (f.exists()){
-//                        videoPlayerManager.playNewVideo(null, player,
-//                                mPostList.getVideoUrl());
-//                        Boolean deleted = f.delete();
-//                        if (deleted){
-//                            Log.e(TAG,"Player deleted "+ deleted);
-//                        }
-//                    }
-
-                }
-
-                @Override
-                public void onBufferingUpdateMainThread(int percent) {
-                }
-
-                @Override
-                public void onVideoStoppedMainThread() {
-                    // Show the cover when video stopped
-                }
-            });
-        } catch (Exception e) {
-            e.printStackTrace();
-            Log.e(TAG,"Player exception "+ e);
+        if (!TextUtils.isEmpty(mPostList.getVideoUrl())) {
+            videoPlayerManager.playNewVideo(null, player, mPostList.getVideoUrl());
         }
     }
-
-    private String getSDCardUrlPath(String returnFileName) {
-       return BaseCameraActivity.getAndroidMoviesFolderInternalStorage() + "/" + returnFileName;
-    }
-
-    public String returnVideoName(String originalUrl) {
-
-        String segments[] = originalUrl.split("/");
-        String s = "\\?dl";
-        String segment[] = segments[segments.length - 1].split(s);
-        Log.d(TAG, "setDataToUI: " + segment[0]);
-//        String returnUrl=segment[0];
-
-        return segment[0];
-    }
-
 
     @Override
     public void stopPlayback(VideoPlayerManager videoPlayerManager) {

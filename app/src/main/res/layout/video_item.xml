@@ -5,20 +5,19 @@
     android:background="@color/video_thumbnail_placeholder_color"
     android:orientation="vertical">
 
-    <com.volokh.danylo.video_player_manager.ui.VideoPlayerView
-        android:id="@+id/player"
+    <FrameLayout
+        android:id="@+id/media_container"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_above="@id/title" />
+        android:layout_height="match_parent" />
 
     <ImageView
         android:id="@+id/cover"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_above="@id/title"
-        android:src="@color/light_gray"
         android:scaleType="centerCrop"
-        android:visibility="visible" />
+        android:src="@color/light_gray"
+        android:visibility="gone" />
 
     <TextView
         android:id="@+id/title"
@@ -33,6 +32,11 @@
         android:layout_centerVertical="true"
         android:visibility="gone" />
 
+    <ProgressBar
+        android:id="@+id/pb_video"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"></ProgressBar>
 
 
     <include layout="@layout/floating_button_menu" />

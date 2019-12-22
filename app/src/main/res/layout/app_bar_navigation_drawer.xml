@@ -22,7 +22,7 @@
 
     <!--<include layout="@layout/video_row" />-->
 
-    <androidx.recyclerview.widget.RecyclerView
+    <com.example.talentplusapplication.video.VideoPlayerRecyclerView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/recycler_view_video_list"/>

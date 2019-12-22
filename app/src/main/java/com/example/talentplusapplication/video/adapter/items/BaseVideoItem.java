@@ -52,7 +52,6 @@ public abstract class BaseVideoItem implements VideoItem, ListItem {
     @Override
     public void setActive(View newActiveView, int newActiveViewPosition) {
         VideoViewHolder viewHolder = (VideoViewHolder) newActiveView.getTag();
-        playNewVideo(new CurrentItemMetaData(newActiveViewPosition, newActiveView), viewHolder.mPlayer, mVideoPlayerManager);
     }
 
     /**
@@ -73,7 +72,7 @@ public abstract class BaseVideoItem implements VideoItem, ListItem {
         final VideoViewHolder videoViewHolder = new VideoViewHolder(view);
         view.setTag(videoViewHolder);
 
-        videoViewHolder.mPlayer.addMediaPlayerListener(new MediaPlayerWrapper.MainThreadMediaPlayerListener() {
+        /*videoViewHolder.mPlayer.addMediaPlayerListener(new MediaPlayerWrapper.MainThreadMediaPlayerListener() {
             @Override
             public void onVideoSizeChangedMainThread(int width, int height) {
             }
@@ -103,7 +102,7 @@ public abstract class BaseVideoItem implements VideoItem, ListItem {
                 // Show the cover when video stopped
                 videoViewHolder.mCover.setVisibility(View.VISIBLE);
             }
-        });
+        });*/
         return view;
     }
 

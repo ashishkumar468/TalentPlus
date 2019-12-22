@@ -4,6 +4,15 @@ ext {
     latest_release = '3.6.2.2804' // TODO check above for latest version
 }
 android {
+    signingConfigs {
+        release {
+            storeFile file('keyfile.jks')
+            storePassword 'ashish1994'
+            keyAlias 'ashish'
+            keyPassword 'ashish1994'
+        }
+    }
+
 //    compileSdkVersion 28
     compileSdkVersion COMPILE_SDK_VERSION as int
     defaultConfig {
@@ -109,11 +118,13 @@ dependencies {
     implementation "im.ene.toro3:toro:${latest_release}"
     implementation "im.ene.toro3:toro-ext-exoplayer:${latest_release}"  // to get ExoPlayer support
 
-    /*implementation 'com.iceteck.silicompressorr:silicompressor:2.2.2'*/
     implementation 'com.google.apis:google-api-services-youtube:v3-rev212-1.25.0'
     implementation 'com.pierfrancescosoffritti.androidyoutubeplayer:chromecast-sender:0.23'
 
+    implementation 'com.google.android.exoplayer:exoplayer-core:2.10.5'
+    implementation 'com.google.android.exoplayer:exoplayer-dash:2.10.5'
+    implementation 'com.google.android.exoplayer:exoplayer-ui:2.10.5'
+
 }
 apply plugin: 'com.google.gms.google-services'
-//apply plugin: 'com.google.gms.google-services'
 
