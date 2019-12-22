@@ -101,39 +101,10 @@
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
         <activity android:name=".ui.user.follow_unfollow.FollowUnfollowActivity" />
         <activity android:name=".ui.user.UserProfileActivity" />
-<!--        <activity android:name=".ui.test_home.TestHomeActivity" />-->
-
         <service android:name=".ui.camera.UploadPostService" />
         <service android:name=".VideoDownloadService" />
 
-
-        <!--<activity
-            android:name="com.dropbox.core.android.AuthActivity"
-            android:configChanges="orientation|keyboard"
-            android:launchMode="singleTask">
-
-            <intent-filter>
-
-                &lt;!&ndash; Change this to be db- followed by your app key &ndash;&gt;
-                <data android:scheme="db-x8agdluqxhdgo0u" />
-
-                <action android:name="android.intent.action.VIEW" />
-
-                <category android:name="android.intent.category.BROWSABLE" />
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </activity>-->
-<!--        <receiver android:name=".VideoDownloadBroadCastReceiver_" />-->
         <receiver android:name=".ui.home.HomeFragment$VideoDownloadBroadCastReceiver" />
-       <!-- <provider
-            android:name="androidx.core.content.FileProvider"
-            android:authorities="com.example.talentplusapplication.fileprovider"
-            android:exported="false"
-            android:grantUriPermissions="true">
-            <meta-data
-                android:name="android.support.FILE_PROVIDE_PATHS"
-                android:value="@xml/provider_paths" />
-        </provider>-->
         <provider
             android:authorities="com.example.talentplusapplication"
             android:name="androidx.core.content.FileProvider"

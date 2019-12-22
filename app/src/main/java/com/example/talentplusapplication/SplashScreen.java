@@ -48,27 +48,13 @@ public class SplashScreen extends AppCompatActivity {
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         setContentView(R.layout.content_main);
-         mVideosDownloader=new VideosDownloader(SplashScreen.this);
+        mVideosDownloader = new VideosDownloader(SplashScreen.this);
 
         if (new Utility(MyApplication.getAppContext()).isConnectingToInternet()) {
             if (checkAndRequestPermissions()) {
                 onCallWebserviceForAllPost();
             }
         }
-
-        /*new Handler().postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                Intent mIntent = new Intent(SplashScreen.this,
-//                        YouTubePlayActivity.class);
-                        BottomNavigationActivity.class);
-//                        CameraActivity.class);
-//                        LoginActivity.class);
-                startActivity(mIntent);
-                finish();
-                //the current activity will get finished.
-            }
-        }, SPLASH_SCREEN_TIME_OUT);*/
     }
 
 
@@ -93,13 +79,7 @@ public class SplashScreen extends AppCompatActivity {
                         prefsEditor.apply();
 
                         Intent mIntent = new Intent(SplashScreen.this,
-//                        YouTubePlayActivity.class);
                                 BottomNavigationActivity.class);
-//                        CameraActivity.class);
-//                        LoginActivity.class);
-//                        Bundle data = new Bundle();
-//                        data.putSerializable("data", (Serializable) listPost);
-//                        mIntent.putExtra ("result.content", data);
                         startActivity(mIntent);
                         finish();
 
@@ -113,18 +93,11 @@ public class SplashScreen extends AppCompatActivity {
                         prefsEditor.apply();
 
                         Intent mIntent = new Intent(SplashScreen.this,
-//                        YouTubePlayActivity.class);
                                 BottomNavigationActivity.class);
-//                        CameraActivity.class);
-//                        LoginActivity.class);
-//                        Bundle data = new Bundle();
-//                        data.putSerializable("data", (Serializable) listPost);
-//                        mIntent.putExtra ("result.content", data);
                         startActivity(mIntent);
                         finish();
 
                     } else if (response.body().getCode().equals("200")) {
-//                        onShowToast(response.body().getDescription());
                         listPost = response.body().getPostsDtoList();
 
                         SharedPreferences mPrefs = getSharedPreferences("name", MODE_PRIVATE);
@@ -134,19 +107,8 @@ public class SplashScreen extends AppCompatActivity {
                         prefsEditor.putString("MyObject", json);
                         prefsEditor.apply();
 
-//                        for (PostDtoListProxy postDtoListProxy:listPost){
-//                            mVideosDownloader.startVideosDownloading(postDtoListProxy.getVideoUrl());
-//
-//                        }
-
                         Intent mIntent = new Intent(SplashScreen.this,
-//                        YouTubePlayActivity.class);
                                 BottomNavigationActivity.class);
-//                        CameraActivity.class);
-//                        LoginActivity.class);
-//                        Bundle data = new Bundle();
-//                        data.putSerializable("data", (Serializable) listPost);
-//                        mIntent.putExtra ("result.content", data);
                         startActivity(mIntent);
                         finish();
 
@@ -215,7 +177,7 @@ public class SplashScreen extends AppCompatActivity {
                         Log.d("in fragment on request", "CAMERA & WRITE_EXTERNAL_STORAGE READ_EXTERNAL_STORAGE permission granted");
                         // process the normal flow
                         if (new Utility(MyApplication.getAppContext()).isConnectingToInternet()) {
-                                onCallWebserviceForAllPost();
+                            onCallWebserviceForAllPost();
                         }
                         //else any one or both the permissions are not granted
                     } else {

@@ -2,10 +2,11 @@ package com.example.talentplusapplication.Proxy;
 
 import androidx.annotation.Nullable;
 
+import com.example.talentplusapplication.video.adapter.items.BaseVideoItem;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-public class PostDtoListProxy {
+public class PostDtoListProxy implements MyVideoItem {
 
     @Expose
     @SerializedName("createdBy")
@@ -239,5 +240,6 @@ public class PostDtoListProxy {
     public void setUserDto(@Nullable UserDTOProxy userDto) {
         this.userDto = userDto;
     }
+
 
 }

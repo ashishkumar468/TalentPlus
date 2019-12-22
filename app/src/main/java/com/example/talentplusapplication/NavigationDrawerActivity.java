@@ -45,12 +45,6 @@ public class NavigationDrawerActivity extends AppCompatActivity
 
 
     private static final String TAG = "NDA";
-    VideoView video_one;
-//    VideoView video_two;
-
-    ImageView play_one;
-//    ImageView play_two;
-
     RecyclerView mRecyclerView;
 
     ImageView imageView_profile;
@@ -76,25 +70,6 @@ public class NavigationDrawerActivity extends AppCompatActivity
 
 
     private void intialization() {
-
-
-        /*video_one=findViewById(R.id.videoview_one);
-        play_one=findViewById(R.id.playbutton_one);
-
-        video_one.setVideoPath("https://www.ebookfrenzy.com/android_book/movie.mp4");
-        video_one.seekTo(1);
-
-
-        play_one.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                video_one.start();
-                play_one.setVisibility(View.GONE);
-
-            }
-        });*/
-
         imageView_profile = findViewById(R.id.imageView_navigation_drawer);
         txtUsername = findViewById(R.id.txt_name_navigation_drawer);
         txtEmail = findViewById(R.id.txt_mail_navigation_drawer);
