@@ -198,7 +198,7 @@ public class UserVideoPlayActivity extends AppCompatActivity implements VideoRec
     public void onStop() {
         super.onStop();
         // we have to stop any playback in onStop
-        mVideoPlayerManager.resetMediaPlayer();
+        mRecyclerView.releasePlayer();
     }
 
     @Override

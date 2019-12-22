@@ -8,7 +8,7 @@ android {
         release {
             storeFile file('keyfile.jks')
             storePassword 'ashish1994'
-            keyAlias 'ashish'
+            keyAlias 'talentplus'
             keyPassword 'ashish1994'
         }
     }
