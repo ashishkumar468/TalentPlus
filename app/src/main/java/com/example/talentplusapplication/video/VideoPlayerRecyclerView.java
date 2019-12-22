@@ -291,12 +291,13 @@ public class VideoPlayerRecyclerView extends RecyclerView {
         DataSource.Factory dataSourceFactory = new DefaultDataSourceFactory(
                 context, Util.getUserAgent(context, "RecyclerView VideoPlayer"));
         String mediaUrl = mediaObjects.get(targetPosition).getVideoUrl();
-//        String mediaUrl = "https://s3.amazonaws.com/magoosh-production/audio_video/dede92e8b7f0336a021237d31cd27e25eee639b7-video-959/web.mp4";
         if (mediaUrl != null) {
             MediaSource videoSource = new ExtractorMediaSource.Factory(dataSourceFactory)
                     .createMediaSource(Uri.parse(mediaUrl));
-            videoPlayer.prepare(videoSource);
-            videoPlayer.setPlayWhenReady(true);
+            if(null!=videoSource && null!=videoPlayer) {
+                videoPlayer.prepare(videoSource);
+                videoPlayer.setPlayWhenReady(true);
+            }
         }
     }
 

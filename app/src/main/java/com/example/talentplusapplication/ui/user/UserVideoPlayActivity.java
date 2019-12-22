@@ -7,6 +7,7 @@ import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.Handler;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -78,7 +79,7 @@ public class UserVideoPlayActivity extends AppCompatActivity implements VideoRec
     private SharedPreferences mPrefs;
     private static final boolean SHOW_LOGS = Config.SHOW_LOGS;
     private static final String TAG = UserVideoPlayActivity.class.getSimpleName();
-    private List<PostDtoListProxy> listPost;
+    private List<MyVideoItem> listPost;
     private int selectedPosition;
 
     private final ArrayList<MyVideoItem> mList = new ArrayList<>();
@@ -166,12 +167,19 @@ public class UserVideoPlayActivity extends AppCompatActivity implements VideoRec
         // use a linear layout manager
         mLayoutManager = new LinearLayoutManager(this);
         mRecyclerView.setLayoutManager(mLayoutManager);
-
+        mRecyclerView.setMediaObjects(listPost);
         int count = 0;
         Log.e(TAG, " Video URL : " + listPost.size());
-        videoRecyclerViewAdapter = new VideoRecyclerViewAdapter(mVideoPlayerManager, this, mList, this);
+        videoRecyclerViewAdapter = new VideoRecyclerViewAdapter(mVideoPlayerManager, this, listPost, this);
 
         mRecyclerView.setAdapter(videoRecyclerViewAdapter);
+        mRecyclerView.scrollToPosition(selectedPosition);
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                mRecyclerView.playVideo(false);
+            }
+        },5000);
 
     }
 
