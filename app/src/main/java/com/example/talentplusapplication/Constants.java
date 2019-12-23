@@ -21,7 +21,7 @@ public class Constants {
 
     public static final String USER_ID = "user_id";
     public static final String USER_DTO = "user_dto";
-    public static final String DROPBOX_ACCESS_TOKEN = "DLQ-YalbVGAAAAAAAAACBUU-lsshGWgQ_HtzVltxCKL-EPNmp_jVgfbzfHxlQZ_-";
+    public static final String DROPBOX_ACCESS_TOKEN = "n5DFPB8NV6AAAAAAAAAADRhaBq0hXBoml3gghI4H7tOav49HfIdCqC9n9PDRWqFw";
     public static final int VIDEO_DURATION_LIMIT = 91000;
     public static String Shared_Pref_Name="TalentPlusShared";
 
